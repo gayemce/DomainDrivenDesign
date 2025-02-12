@@ -1,0 +1,40 @@
+# Junk files for Visual Studio and Rider
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build files
+bin/
+obj/
+out/
+
+# Package management
+node_modules/
+**/packages/
+!**/packages/repositories.config
+
+# .NET dependencies
+*.nuget
+.nuget/
+
+# Application settings (if they may contain personal information)
+appsettings.json
+secrets.json
+
+# Log files
+logs/
+*.log
+
+# Operating system junk files
+.DS_Store
+Thumbs.db
+
+# For Rider and JetBrains
+.idea/
+*.iml
+
+# Docker-related junk files
+docker-compose.override.yml
