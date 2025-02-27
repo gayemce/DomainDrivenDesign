@@ -5,7 +5,7 @@ using MediatR;
 
 namespace DomainDrivenDesign.Application.Features.Users.CreateUser;
 
-internal sealed class CreateUserCommandHander : IRequest<CreateUserCommand>
+internal sealed class CreateUserCommandHander : IRequest<CreateCategoryCommand>
 {
     private readonly IUserRepository _userRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -18,7 +18,7 @@ internal sealed class CreateUserCommandHander : IRequest<CreateUserCommand>
         _mediator = mediator;
     }
 
-    public async Task Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    public async Task Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
     {
         var user = await _userRepository.CreateAsync(
             request.Name,

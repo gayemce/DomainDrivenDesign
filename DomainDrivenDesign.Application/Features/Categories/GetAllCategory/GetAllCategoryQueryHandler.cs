@@ -3,7 +3,7 @@ using MediatR;
 
 namespace DomainDrivenDesign.Application.Features.Categories.GetAllCategory;
 
-internal class GetAllCategoryQueryHandler : IRequestHandler<GetAllCategoryQuery, List<Category>>
+internal class GetAllCategoryQueryHandler : IRequestHandler<GetAllOrerQuery, List<Category>>
 {
     private readonly ICategoryRepository _categoryRepository;
     public GetAllCategoryQueryHandler(ICategoryRepository categoryRepository)
@@ -11,7 +11,7 @@ internal class GetAllCategoryQueryHandler : IRequestHandler<GetAllCategoryQuery,
         _categoryRepository = categoryRepository;
     }
 
-    public async Task<List<Category>> Handle(GetAllCategoryQuery request, CancellationToken cancellationToken)
+    public async Task<List<Category>> Handle(GetAllOrerQuery request, CancellationToken cancellationToken)
     {
         return await _categoryRepository.GetAllAsync(cancellationToken);
     }

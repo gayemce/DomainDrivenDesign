@@ -3,4 +3,4 @@ using MediatR;
 
 namespace DomainDrivenDesign.Application.Features.Categories.GetAllCategory;
 
-public sealed record GetAllCategoryQuery(): IRequest<List<Category>>;
+public sealed record GetAllOrerQuery(): IRequest<List<Category>>;
