@@ -1,7 +1,7 @@
 ﻿using MediatR;
 
 namespace DomainDrivenDesign.Application.Features.Users.CreateUser;
-public sealed record CreateCategoryCommand(
+public sealed record CreateUserCommand(
     string Name, 
     string Email, 
     string Password, 

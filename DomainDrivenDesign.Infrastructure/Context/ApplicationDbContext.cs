@@ -69,8 +69,8 @@ internal sealed class ApplicationDbContext : DbContext, IUnitOfWork
             });
     }
 
-    public Task<int> SaveChangeAsync(CancellationToken cancellationToken = default)
+    public async Task<int> SaveChangeAsync(CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        return await base.SaveChangesAsync(cancellationToken);
     }
 }

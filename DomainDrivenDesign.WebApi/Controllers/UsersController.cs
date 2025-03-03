@@ -16,7 +16,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(CreateCategoryCommand request, CancellationToken cancellationToken)
+    public async Task<IActionResult> Create(CreateUserCommand request, CancellationToken cancellationToken)
     {
         await _mediator.Send(request, cancellationToken);
         return NoContent();
